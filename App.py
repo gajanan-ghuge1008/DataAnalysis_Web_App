@@ -80,7 +80,7 @@ if upload is not None:
 
 st.download_button(
     label="📥 Download EDA Data (CSV)",
-    data=csv,
+    data=data,
     file_name="eda_processed_data.csv",
     mime="text/csv"
 )
@@ -105,5 +105,6 @@ if st.checkbox('By'):
     
 
     
+
 
 
