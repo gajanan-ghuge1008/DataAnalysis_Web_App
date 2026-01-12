@@ -74,17 +74,18 @@ if upload is not None:
                 st.text('OK! No Problem..')
         else:
             st.success('Good! No Duplicates..')
-            
 # Download dataset after eda
-csv_data = data.to_csv(index=False)
-
-st.download_button(
-    label="📥 Download EDA Data",
-    data=csv_data,
-    file_name="eda_processed_data.csv",
-    mime="text/csv"
-)
+    csv_data = data.to_csv(index=False)
+    
+    st.download_button(
+        label="📥 Download EDA Data",
+        data=csv_data,
+        file_name="eda_processed_data.csv",
+        mime="text/csv"
+    )
             
+
+                
             
 # About section 
 if st.button('About App'):
@@ -104,12 +105,3 @@ if st.checkbox('By'):
     st.success('Gajanan Ghuge')
     
     
-
-    
-
-
-
-
-
-
-
