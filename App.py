@@ -14,7 +14,7 @@ import numpy as np
 
 # Title and Subheader
 st.title('Exploratory Data Analysis')
-st.subheader('Data Anlysis Web fApp using Python & Stremlit')
+st.subheader('Data Anlysis Web App using Python & Stremlit')
 
 # Upload Data Set File
 upload = st.file_uploader('Upload your Dataset (In CSV File) ')
@@ -93,4 +93,5 @@ The app is designed to be simple, fast, and intuitive, making EDA more accessibl
 if st.checkbox('By'):
     st.success('Gajanan Ghuge')
     
+
     
