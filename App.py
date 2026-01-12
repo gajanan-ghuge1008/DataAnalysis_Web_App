@@ -76,11 +76,11 @@ if upload is not None:
             st.success('Good! No Duplicates..')
             
 # data is your final DataFrame after EDA
-#csv = data.to_csv(index=False)
+csv = data.to_csv(index=False)
 
 st.download_button(
     label="📥 Download EDA Data (CSV)",
-    data=data,
+    data=csv,
     file_name="eda_processed_data.csv",
     mime="text/csv"
 )
@@ -105,6 +105,7 @@ if st.checkbox('By'):
     
 
     
+
 
 
 
