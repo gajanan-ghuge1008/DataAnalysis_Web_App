@@ -59,7 +59,6 @@ if upload is not None:
                 st.pyplot()
         else: 
             st.success('Congrass! No missing Values..')
-
 # Check for Duplicate Values
 if upload is not None:  
     if st.checkbox('Check Duplicate Data in Dataset'):
@@ -68,7 +67,7 @@ if upload is not None:
             st.warning('This Dataset Contain some duplicate Values!')
             dup = st.selectbox('Do you want to remove duplicates form dataset?',('Select one','Yes','No'))
             if dup == 'Yes':
-                data = data.drop_duplicates()
+                df = data.drop_duplicates()
                 st.success('Duplicate Values are Removed')
             if dup == 'No':
                 st.text('OK! No Problem..')
@@ -76,7 +75,7 @@ if upload is not None:
             st.success('Good! No Duplicates..')
             
 # data is your final DataFrame after EDA
-csv = data.to_csv(index=False)
+csv = df.to_csv(index=False)
 
 st.download_button(
     label="📥 Download EDA Data (CSV)",
@@ -105,6 +104,7 @@ if st.checkbox('By'):
     
 
     
+
 
 
 
