@@ -67,7 +67,7 @@ if upload is not None:
             st.warning('This Dataset Contain some duplicate Values!')
             dup = st.selectbox('Do you want to remove duplicates form dataset?',('Select one','Yes','No'))
             if dup == 'Yes':
-                df = data.drop_duplicates()
+                data = data.drop_duplicates()
                 st.success('Duplicate Values are Removed')
             if dup == 'No':
                 st.text('OK! No Problem..')
@@ -75,11 +75,12 @@ if upload is not None:
             st.success('Good! No Duplicates..')
             
 # data is your final DataFrame after EDA
-csv = df.to_csv(index=False)
+
+csv_data = data.to_csv(index=False)
 
 st.download_button(
-    label="📥 Download EDA Data (CSV)",
-    data=csv,
+    label="📥 Download EDA Data",
+    data=csv_data,
     file_name="eda_processed_data.csv",
     mime="text/csv"
 )
@@ -104,6 +105,7 @@ if st.checkbox('By'):
     
 
     
+
 
 
 
