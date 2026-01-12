@@ -14,7 +14,7 @@ import numpy as np
 
 # Title and Subheader
 st.title('Exploratory Data Analysis')
-st.subheader('Data Anlysis Web App using Python & Stremlit')
+st.subheader('Data Anlysis Web fApp using Python & Stremlit')
 
 # Upload Data Set File
 upload = st.file_uploader('Upload your Dataset (In CSV File) ')
@@ -59,6 +59,7 @@ if upload is not None:
                 st.pyplot()
         else: 
             st.success('Congrass! No missing Values..')
+
 # Check for Duplicate Values
 if upload is not None:  
     if st.checkbox('Check Duplicate Data in Dataset'):
@@ -74,8 +75,7 @@ if upload is not None:
         else:
             st.success('Good! No Duplicates..')
             
-# data is your final DataFrame after EDA
-
+# Download dataset after eda
 csv_data = data.to_csv(index=False)
 
 st.download_button(
@@ -103,8 +103,10 @@ The app is designed to be simple, fast, and intuitive, making EDA more accessibl
 if st.checkbox('By'):
     st.success('Gajanan Ghuge')
     
+    
 
     
+
 
 
 
