@@ -1,4 +1,4 @@
-
+A
 """
 Created on Mon Jan 12 10:40:52 2026
 
@@ -14,7 +14,7 @@ import numpy as np
 
 # Title and Subheader
 st.title('Exploratory Data Analysis')
-st.subheader('Data Anlysis Web fApp using Python & Stremlit')
+st.subheader('Data Anlysis Web AApp using Python & Stremlit')
 
 # Upload Data Set File
 upload = st.file_uploader('Upload your Dataset (In CSV File) ')
@@ -105,3 +105,4 @@ if st.checkbox('By'):
     st.success('Gajanan Ghuge')
     
     
+
